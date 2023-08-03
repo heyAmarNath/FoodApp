@@ -1,2 +1,2 @@
-# Namaste-React
-This repo is for learning React library
+# FoodApp
+A simple food ordering app like Swiggy and Zomato built with React.
