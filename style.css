@@ -1,0 +1,39 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    background-color: #333333;
+    color: white;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color:tomato;
+}
+
+.nav-list>ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-list>ul>li {
+    padding: 10px;
+}
+
+.card {
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid gold;
+}
+
+.restaurant-list {
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: start; */
+}
+
+.card>img {
+    width: 100%;
+}
