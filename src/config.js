@@ -1,6 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
 /*
 APP LAYOUT
 Header
@@ -21,27 +18,10 @@ Footer
 
 */
 
-const Title = () => (
-  <a href="/">
-    <h1>FoodApp</h1>
-  </a>
-);
+export const IMG_CDN_URL =
+  "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
-const Header = () => (
-  <div className="header">
-    <Title />
-    <div className="nav-list">
-      <ul>
-        <li>Home</li>
-        <li>About Us</li>
-        <li>Contact</li>
-        <li>Cart</li>
-      </ul>
-    </div>
-  </div>
-);
-
-const restaurantList = [
+export const restaurantList = [
   {
     info: {
       id: "85216",
@@ -830,43 +810,3 @@ const restaurantList = [
     widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
   },
 ];
-/* Insted of writing props, we can destructure the object on the go */
-const RestaurantCard = ({ name, cuisines, cloudinaryImageId, avgRating }) => {
-  // destructure the restaurant
-  // const { name, cuisines, cloudinaryImageId, avgRating } = restaurant.info;
-  return (
-    <div className="card">
-      <img
-        src={
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
-          cloudinaryImageId
-        }
-      />
-      <h2>{name}</h2>
-      <h4>{cuisines.join(", ")}</h4>
-      <h4>{avgRating} Stars</h4>
-    </div>
-  );
-};
-
-const Body = () => {
-  return (
-    <div className="restaurant-list">
-      {restaurantList.map((restaurant) => {
-        return <RestaurantCard {...restaurant.info} key={restaurant.info.id}/>;
-      })}
-    </div>
-  );
-};
-const Footer = () => <h1>Footer</h1>;
-
-const AppLayout = () => (
-  <>
-    <Header />
-    <Body />
-    <Footer />
-  </>
-);
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);
