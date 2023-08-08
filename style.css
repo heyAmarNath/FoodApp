@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    background-color:tomato;
+    background-color: tomato;
 }
 
 .nav-list>ul {
@@ -23,15 +23,46 @@
     width: 200px;
     padding: 10px;
     margin: 10px;
-    border: 2px solid gold;
+    /* border: 2px solid gold; */
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+
 }
 
 .restaurant-list {
     display: flex;
     flex-wrap: wrap;
+
     /* align-items: start; */
 }
 
 .card>img {
     width: 100%;
+}
+
+.shimmer-effect {
+    width: 200px;
+    height: 400px;
+    margin: 20px;
+    background-color: rgb(42, 41, 41);
+
+}
+
+.shimmer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.login-btn,
+.search-btn {
+    padding: 10px 20px;
+    background-color: #3498db;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+.login-btn:hover {
+    background-color: #2980b9;
 }
