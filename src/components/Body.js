@@ -1,6 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
+
 // import { restaurantList } from "../config";
 
 // function to filter Restaurant from Data
@@ -29,10 +30,10 @@ const Body = () => {
     const data = await fetch(
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.8812268&lng=77.6278377&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
-    console.log(data);
+    // console.log(data);
 
     const jsonData = await data.json();
-    console.log(jsonData);
+    // console.log(jsonData);
 
     setAllRestaurants(
       jsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
@@ -44,10 +45,9 @@ const Body = () => {
     );
   }
 
-  // allRestaurants.length === 0 ? (
-  //   <Shimmer />
-  // ) :
-  return (
+  return allRestaurants.length === 0 ? (
+    <Shimmer />
+  ) : (
     <>
       <div className="search-box">
         <input

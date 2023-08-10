@@ -39,11 +39,11 @@
     width: 100%;
 }
 
-.shimmer-effect {
+.shimmer-card {
     width: 200px;
     height: 400px;
     margin: 20px;
-    background-color: rgb(42, 41, 41);
+    background-color: rgb(209, 207, 207);
 
 }
 
@@ -65,4 +65,18 @@
 
 .login-btn:hover {
     background-color: #2980b9;
+}
+
+.carousel {
+    margin: 20px;
+   box-sizing: border-box;
+    /* border: 2px solid gold; */
+}
+
+.carousel-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.carousel-card >img{
+    width:100px
 }
