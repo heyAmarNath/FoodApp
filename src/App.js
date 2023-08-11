@@ -15,9 +15,8 @@ const AppLayout = () => {
   return (
     <>
       <Header />
-      <Cuisine/>
-      {/* <Carousel /> */}
-      {/* <Outlet /> */}
+      <Outlet />
+      {/* <Carousel/> */}
       <Footer />
     </>
   );
